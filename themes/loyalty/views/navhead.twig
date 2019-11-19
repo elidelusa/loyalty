@@ -1,22 +1,37 @@
 <div class="container">
-	<a class="navbar-brand js-scroll-trigger" href="{{ site.url }}">Loyalty Rewards</a>
+	<a class="navbar-brand js-scroll-trigger" href="{{ site.link }}/#page-top">Loyalty Rewards</a>
 	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
 		<i class="fas fa-bars"></i>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav text-uppercase ml-auto">
-			<li class="nav-item">
-				<a class="nav-link js-scroll-trigger" href="{{ site.url }}/#register">Create Account</a>
-			</li>		
-			<li class="nav-item">
-				<a class="nav-link js-scroll-trigger" href="{{ site.url }}/#howitworks">How it Works</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link js-scroll-trigger" href="{{ site.url }}/#contact">Contact Us</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link js-scroll-trigger" href="{{ site.url }}/login">Login</a>
-			</li>			
+			{% if user %}
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ site.url }}/account">My Account</a>
+				</li>		
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ site.url }}/profile">My Profile</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ site.url }}/change">Change Password</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ function('wp_logout_url') }}">Logout</a>
+				</li>
+			{% else %}
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ site.url }}/#register">Create Account</a>
+				</li>		
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ site.url }}/#howitworks">How it Works</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ site.url }}/#contact">Contact Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="{{ site.url }}/login">Login</a>
+				</li>		
+			{% endif %}	
 		</ul>
 	</div>
 </div>

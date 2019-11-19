@@ -10,8 +10,8 @@ Last updated by: Eli
 
 $context = Timber::context();
 
-$timber_post     = new Timber\Post();
-$context['post'] = $timber_post;
+$context['current_user'] = new Timber\User();
+$context['post']    = new Timber\Post();
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
 
 

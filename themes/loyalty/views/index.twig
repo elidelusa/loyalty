@@ -23,11 +23,15 @@
 			</header>	
 		{% endblock %}
 
-		{% block register %}
-			<section class="page-section" id="register">
-				{% include 'register.twig' %}
-			</section>	
-		{% endblock %}
+		{% if user %}
+			{{ function('wp_redirect', userlogin_redirect) }}
+		{% else %}
+			{% block register %}
+				<section class="page-section" id="register">
+					{% include 'register.twig' %}
+				</section>	
+			{% endblock %}
+		{% endif %}
 
 		{% block partners %}
 			<section class="py-5">

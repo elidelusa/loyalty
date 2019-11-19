@@ -8,10 +8,14 @@ Last updated by: Eli
 **/
 
 
+//redirect
+$redirect_account_url = home_url() . '/account';
+
 $context = Timber::context();
 $context['posts'] = new Timber\PostQuery();
 $context['homebanner'] = Timber::get_post(5);
 $context['createaccount'] = Timber::get_post(8);
+$context['userlogin_redirect'] = $redirect_account_url;
 
 $templates = array( 'index.twig' );
 if ( is_home() ) {
