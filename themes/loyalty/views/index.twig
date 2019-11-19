@@ -1,0 +1,61 @@
+{% block html_head_container %}
+
+{% include 'header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+<body id="page-top">
+
+	{% block navhead %}
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+			{% include 'navhead.twig' %}
+		</nav>
+	{% endblock %}
+
+
+	{% block main %}
+		
+		{% block header %}
+			<header class="masthead">
+				{% include 'homebanner.twig' %}
+			</header>	
+		{% endblock %}
+
+		{% block register %}
+			<section class="page-section" id="register">
+				{% include 'register.twig' %}
+			</section>	
+		{% endblock %}
+
+		{% block partners %}
+			<section class="py-5">
+				{% include 'partnerclients.twig' %}
+			</section>	
+		{% endblock %}
+
+		{% block howitworks %}
+			<section class="page-section" id="howitworks">
+				{% include 'howitworks.twig' %}
+			</section>	
+		{% endblock %}
+
+		{% block contact %}
+			<section class="page-section" id="contact">
+				{% include 'contact.twig' %}
+			</section>	
+		{% endblock %}
+
+	{% endblock %}
+	
+
+	{% block footer %}
+		<footer class="footer">
+			{% include 'footer.twig' %}
+		</footer>
+		{{ function('wp_footer') }}
+	{% endblock %}
+		
+</body>
+</html>

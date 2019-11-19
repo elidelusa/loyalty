@@ -1,0 +1,39 @@
+/*
+Theme Name: Loyalty
+Theme URI: https://google.com
+Author: Eli Delusa
+Author URI: https://google.com/
+Description: A fully responsive, SEO-friendly, jQuery-ready, and WordPress theme to demonstrate timber framework for developers.
+Version: 1.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, right-sidebar, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready, blog, e-commerce, portfolio
+
+*/
+
+/* 
+ * Custom style for the theme
+*/
+
+/* Page Navigation */
+.navbar-page {
+	background-color: #212529 !important;
+}
+.page-layout {
+	margin-top: 100px !important;
+}
+
+
+/* Welcome Banner intro */
+.intro-heading p {
+	line-height: inherit;
+}
+
+
+/* Create Account form */
+.card-title {
+	display: none;
+}
+.bsui button {
+	font-family: initial;
+}

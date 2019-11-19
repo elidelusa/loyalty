@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html {{ function('language_attributes') }}>
+
+<head>
+
+	<meta charset="{{ site.charset }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>
+		{% if wp_title %}
+			{{ wp_title }} - {{ site.name }}
+		{% else %}
+			{{ wp_title }}
+		{% endif %}
+		
+		{{ function('wp_title') }}
+		
+		Loyaty
+	</title>
+
+	{{ function('wp_head') }}

@@ -1,0 +1,27 @@
+{% extends "index.twig" %}
+
+	{% block navhead %}
+		<nav class="navbar navbar-page navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+			{% include 'navhead.twig' %}
+		</nav>
+	{% endblock %}	
+
+
+	{% block main %}
+		
+		{% block content %}
+			<section class="page-section page-layout" id="page-{{post.ID}}">
+				<div class="container">
+			    	<div class="row">
+			    		<div class="col-lg-12 text-center">
+			    			<h2 class="section-heading text-uppercase">{{post.title}}</h2>
+			    			<div class="page-article-content">
+								{{post.content}}
+							</div>
+			    		</div>
+			    	</div>
+			    </div>
+			</section>
+		{% endblock %}
+					
+	{% endblock %}
